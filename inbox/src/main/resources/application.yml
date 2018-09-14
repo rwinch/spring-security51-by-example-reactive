@@ -1,0 +1,7 @@
+logging:
+  level:
+    reator:
+      netty:
+        channel: DEBUG
+users-url: http://localhost:8081/users
+messages-url: http://localhost:8082/messages
