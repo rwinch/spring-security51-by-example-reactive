@@ -13,6 +13,7 @@ spring:
         provider:
           keycloak:
             issuer-uri: http://idp:9999/auth/realms/demo
+            user-name-attribute: email
 
         registration:
           keycloak:
