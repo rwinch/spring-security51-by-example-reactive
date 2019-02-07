@@ -5,3 +5,16 @@ logging:
         channel: DEBUG
 users-url: http://localhost:8081/users
 messages-url: http://localhost:8082/messages
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://idp:9999/auth/realms/demo
+
+        registration:
+          keycloak:
+            client-id: spring-security
+            client-secret: bfbd9f62-02ce-4638-a370-80d45514bd0a
