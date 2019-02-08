@@ -52,7 +52,7 @@
                 <a class="nav-link" href="#" th:href="@{/inbox}">Inbox <span class="sr-only">(current)</span></a>
             </li>
         </ul>
-        <div th:if="${currentUser != null}" class="navbar-text px-2" th:text="${currentUser.name}">rob@example.com</div>
+        <div th:if="${currentUser != null}" class="navbar-text px-2" th:text="${currentUser.firstName}">rob@example.com</div>
         <form th:if="${currentUser != null}" class="form-inline my-2 my-lg-0" th:action="@{/logout}" th:method="post">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log out</button>
         </form>
