@@ -1,5 +1,6 @@
 package sample.message;
 
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,8 +22,7 @@ public class MessageController {
 	}
 
 	@GetMapping("/inbox")
-	Flux<Message> inbox() {
-		String currentUserId = "1";
+	Flux<Message> inbox(@AuthenticationPrincipal(expression = "claims['user_id']") String currentUserId) {
 		return this.messages.findByTo(currentUserId);
 	}
 
