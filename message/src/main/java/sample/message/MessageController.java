@@ -22,7 +22,7 @@ public class MessageController {
 	}
 
 	@GetMapping("/inbox")
-	Flux<Message> inbox(@AuthenticationPrincipal(expression = "claims['user_id']") String currentUserId) {
+	Flux<Message> inbox(@CurrentUserId String currentUserId) {
 		return this.messages.findByTo(currentUserId);
 	}
 
