@@ -1,7 +1,5 @@
 package sample.message;
 
-import org.springframework.security.access.prepost.PostAuthorize;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,7 +25,6 @@ public class MessageController {
 		return this.messages.findByTo(currentUserId);
 	}
 
-	@PostAuthorize("returnObject?.to == principal?.claims['id']")
 	@GetMapping("/{id}")
 	Mono<Message> findById(@PathVariable Long id) {
 		return this.messages.findById(id);
