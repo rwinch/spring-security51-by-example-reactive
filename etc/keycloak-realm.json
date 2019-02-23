@@ -671,7 +671,7 @@
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
-      "secret": "**********",
+      "secret": "bfbd9f62-02ce-4638-a370-80d45514bd0a",
       "redirectUris": [
         "http://localhost:8080/login/oauth2/code/keycloak",
         "http://localhost:8080/authorize/oauth2/code/keycloak"
@@ -1804,5 +1804,94 @@
     "offlineSessionMaxLifespanEnabled": "false"
   },
   "keycloakVersion": "4.1.0.Final",
-  "userManagedAccessAllowed": false
+  "userManagedAccessAllowed": false,
+  "users" : [ 
+    {
+      "id" : "c949272c-56a8-4437-98f7-8d976b6d88bd",
+      "createdTimestamp" : 1550866753471,
+      "username" : "joe",
+      "credentials" : [{
+         "value" : "password",
+         "type" : "password"
+      }],
+      "realmRoles" : [ "offline_access", "uma_authorization" ],
+      "enabled" : true,
+      "totp" : false,
+      "emailVerified" : true,
+      "firstName" : "Joe",
+      "lastName" : "Grandja",
+      "email" : "joe@example.com",
+      "attributes" : {
+        "user_id" : [ "2" ]
+      },
+      "disableableCredentialTypes" : [ "password" ],
+      "requiredActions" : [ ],
+      "notBefore" : 0,
+      "access" : {
+        "manageGroupMembership" : true,
+        "view" : true,
+        "mapRoles" : true,
+        "impersonate" : true,
+        "manage" : true
+      }
+    },
+    {
+      "id" : "3b62fbf2-b0d5-49e4-9e39-0e18486fc8e0",
+      "createdTimestamp" : 1550866796632,
+      "username" : "josh",
+      "credentials" : [{
+         "value" : "password",
+         "type" : "password"
+      }],
+      "realmRoles" : [ "offline_access", "uma_authorization" ],
+      "enabled" : true,
+      "totp" : false,
+      "emailVerified" : true,
+      "firstName" : "Josh",
+      "lastName" : "Cummings",
+      "email" : "josh@example.com",
+      "attributes" : {
+        "user_id" : [ "3" ]
+      },
+      "disableableCredentialTypes" : [ "password" ],
+      "requiredActions" : [ ],
+      "notBefore" : 0,
+      "access" : {
+        "manageGroupMembership" : true,
+        "view" : true,
+        "mapRoles" : true,
+        "impersonate" : true,
+        "manage" : true
+      }
+    },
+    {
+      "id" : "998182b8-a3a5-436f-a3bf-ea516a9720f3",
+      "createdTimestamp" : 1550866246872,
+      "username" : "rob",
+      "credentials" : [{
+         "value" : "password",
+         "type" : "password"
+      }],
+      "realmRoles" : [ "offline_access", "uma_authorization" ],
+      "enabled" : true,
+      "totp" : false,
+      "emailVerified" : true,
+      "firstName" : "Rob",
+      "lastName" : "Winch",
+      "email" : "rob@example.com",
+      "attributes" : {
+        "user_id" : [ "1" ]
+      },
+      "disableableCredentialTypes" : [ "password" ],
+      "requiredActions" : [ ],
+      "notBefore" : 0,
+      "access" : {
+        "manageGroupMembership" : true,
+        "view" : true,
+        "mapRoles" : true,
+        "impersonate" : true,
+        "manage" : true
+      }
+    }
+  ]
 }
